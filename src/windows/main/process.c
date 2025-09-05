@@ -2,14 +2,14 @@
 #include <string.h>
 #include "tsimple.h"
 
-uint8_t masks[] = { 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80 };
+BYTE masks[] = { 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80 };
 int buflen = 0;
 
 bool binarytobinary(char *buf)
 {
 	FILE *output;
-	uint8_t bytebuf[strlen(buf)];
-	uint8_t chomp;
+	BYTE bytebuf[strlen(buf)];
+	BYTE chomp;
 
 	memset(bytebuf, 0, sizeof(bytebuf));
 	if ((output = fopen(OUTPUT, "wb")) == NULL) {

@@ -1,8 +1,7 @@
 #ifndef __TSIMPLE_H__
 #define __TSIMPLE_H__
 
-#include <stdbool.h>
-#include <stdint.h>
+#include <windows.h>
 
 #define SE(a, b) strcmp(a, b)
 

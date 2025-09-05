@@ -1,5 +1,5 @@
 CC=gcc
-WCC=x86_64-w32_mingw32
+WCC=x86_64-w64-mingw32-gcc
 WINE=wine
 SRC=src/linux/main
 WSRC=src/windows/main
@@ -7,7 +7,7 @@ DEPS=src/linux/include
 WDEPS=src/windows/include
 BUILD=build
 SRS=$(SRC)/pilot.c $(SRC)/process.c
-WSRS=$(WSRC)/pilot.c
+WSRS=$(WSRC)/pilot.c $(WSRC)/process.c
 
 all: linux windows
 linux: $(BUILD)/pilot
